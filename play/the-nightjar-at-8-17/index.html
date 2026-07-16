@@ -7,13 +7,13 @@
   <meta name="theme-color" content="#171918">
   <title>The Nightjar at 8:17 · Nightjar Docket</title>
   
-  <meta name="description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.">
+  <meta name="description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six clues and solve the case with no signup, app, or printing.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/">
   <meta property="og:site_name" content="Nightjar Docket">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Free 10-Minute Family Mystery Game | Nightjar Docket">
-  <meta property="og:description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.">
+  <meta property="og:description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six clues and solve the case with no signup, app, or printing.">
   <meta property="og:url" content="https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/">
   <meta property="og:image" content="https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg">
   <meta property="og:image:width" content="1200">
@@ -21,9 +21,9 @@
   <meta property="og:image:alt" content="An ornate astronomical clock reveals a brass nightjar while a camera waits nearby">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free 10-Minute Family Mystery Game | Nightjar Docket">
-  <meta name="twitter:description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.">
+  <meta name="twitter:description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six clues and solve the case with no signup, app, or printing.">
   <meta name="twitter:image" content="https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":["VideoGame","WebApplication"],"name":"The Nightjar at 8:17","description":"Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.","url":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/","image":"https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg","applicationCategory":"GameApplication","operatingSystem":"Any modern web browser","browserRequirements":"JavaScript enabled","isFamilyFriendly":true,"inLanguage":"en","author":{"@type":"Organization","name":"Nightjar Docket","url":"https://thorep.github.io/nightjar-docket-site/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":["VideoGame","WebApplication"],"name":"The Nightjar at 8:17","description":"Play a free 10-minute, family-safe detective mystery in your browser. Examine six clues and solve the case with no signup, app, or printing.","url":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/","image":"https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg","applicationCategory":"GameApplication","operatingSystem":"Any modern web browser","browserRequirements":"JavaScript enabled","isFamilyFriendly":true,"inLanguage":"en","author":{"@type":"Organization","name":"Nightjar Docket","url":"https://thorep.github.io/nightjar-docket-site/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/"}}</script>
   <style>
     :root {
       --ink: oklch(20% 0.01 145);
@@ -46,7 +46,6 @@
       --shadow-paper: 0 4px 7px oklch(5% 0 0 / 0.24);
       --max: 1180px;
       --z-dialog: 30;
-      --key-art-image: url("../../assets/free/the-nightjar-at-8-17-key-art.webp");
     }
 
     * { box-sizing: border-box; }
@@ -143,13 +142,29 @@
       overflow: hidden;
       border: 1px solid oklch(96% 0 0 / 0.2);
       border-radius: var(--radius-md);
-      background:
-        linear-gradient(180deg, transparent 52%, oklch(18% 0.012 145 / 0.9) 100%),
-        var(--key-art-image) center / cover no-repeat;
+      background: var(--ink-2);
       box-shadow: 0 28px 70px oklch(8% 0.01 145 / 0.46);
+    }
+    .hero-art-image {
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-art::before {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 52%, oklch(18% 0.012 145 / 0.9) 100%);
+      content: "";
+      pointer-events: none;
     }
     .hero-art::after {
       position: absolute;
+      z-index: 2;
       inset: 14px;
       border: 1px solid oklch(76% 0.09 75 / 0.42);
       border-radius: calc(var(--radius-md) - 7px);
@@ -161,7 +176,7 @@
       right: 32px;
       bottom: 26px;
       left: 32px;
-      z-index: 1;
+      z-index: 3;
       margin: 0;
       color: var(--paper);
       font-size: 0.76rem;
@@ -574,6 +589,40 @@
       margin-bottom: 22px;
       background: oklch(35% 0.015 75);
     }
+    .evidence-visual {
+      position: relative;
+      overflow: hidden;
+      margin: 16px 0 20px;
+      aspect-ratio: 4 / 3;
+      border: 1px solid oklch(22% 0.01 145 / 0.28);
+      background: #d8d7d0;
+    }
+    .evidence-visual > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .evidence-visual .compass-overlay {
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      width: 30%;
+      height: 30%;
+      filter: drop-shadow(0 2px 2px rgb(0 0 0 / 55%));
+      transform: translate(-50%, -50%);
+    }
+    .evidence-visual .photo-stamp {
+      position: absolute;
+      right: 14px;
+      bottom: 12px;
+      padding: 6px 9px;
+      color: #f4efe4;
+      background: rgb(15 17 16 / 78%);
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+    }
     .book-cover {
       position: relative;
       display: grid;
@@ -648,16 +697,43 @@
       }
     }
     @media print {
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
       :root { color-scheme: light; }
       body { color: #171918; background: white; }
       .skip-link, .topbar, .button, .ledger, .checkpoint, .notebook, dialog, .footer, #phases, .accusation { display: none !important; }
       .hero, .briefing, .suspects, .workspace { padding: 28px 0; }
       .briefing-wrap, .suspect-strip, .suspect, .workspace { color: #171918; background: white; }
-      .hero { grid-template-columns: 1fr; color: #171918; }
-      .hero-art { min-height: 110mm; background-image: var(--key-art-image); }
+      .hero {
+        display: block;
+        color: #171918;
+      }
+      .hero > div:first-child { margin-bottom: 12mm; }
+      .hero-visual {
+        background: white;
+        break-inside: avoid;
+      }
+      .hero-art {
+        min-height: 0;
+        background: white;
+        box-shadow: none;
+        break-inside: avoid;
+      }
+      .hero-art-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
       .hero-art-caption { color: white; }
       .subtitle, .phase-heading p, .suspect p, .suspect blockquote { color: #333; }
-      .case-facts { border-color: #777; }
+      .case-facts {
+        border-color: #777;
+        background: white;
+      }
       .suspect-list { grid-template-columns: repeat(2, 1fr); gap: 12px; background: transparent; }
       .suspect { border: 1px solid #aaa; break-inside: avoid; }
       .print-evidence { display: block; }
@@ -694,6 +770,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-art" id="heroArt" role="img">
+          <img class="hero-art-image" src="../../assets/free/the-nightjar-at-8-17-key-art.webp" alt="">
           <p class="hero-art-caption" id="heroCaption"></p>
         </div>
         <dl class="case-facts" id="caseFacts"></dl>
@@ -768,7 +845,7 @@
     </div>
   </dialog>
 
-  <script>const CASE_DATA = {"schemaVersion":1,"slug":"the-nightjar-at-8-17","caseNumber":"000","title":"The Nightjar at 8:17","subtitle":"A silent clock, a brass bird, and one photograph taken too early.","brand":"Nightjar Docket","rating":"Family-safe · Age 12+","players":"1–6 players","duration":"5–10 minutes","difficulty":"1 / 5","briefing":["At 8:17 p.m., during a private preview at Morrow Hall, a restored astronomical clock gave one clear chime and unfolded its brass nightjar. That should have been impossible: the clock was unwound, its striking mechanism was disconnected, and tomorrow’s public reveal was under embargo.","Only three people were in the gallery. One of them planned the moment. Work out what made the silent clock chime, who staged it, and why the photograph mattered."],"objective":"Identify who caused the impossible chime, explain how it was staged, and determine the intended payoff.","presentation":{"heroAlt":"An ornate black astronomical clock with a brass nightjar automaton emerging under a museum spotlight while a camera waits nearby","heroCaption":"The photograph began before the surprise.","briefingTitle":"One impossible chime.","suspectsTitle":"Three carefully timed stories.","workspaceTitle":"Observe. Compare. Accuse.","accusationTitle":"Record the complete explanation.","accusationDescription":"Choose the person, method, and intended payoff that fit every timestamp.","footer":"Nightjar Docket · This free case stores progress only in your browser."},"suspects":[{"id":"eleanor","name":"Eleanor Ash","role":"Conservation lead","summary":"Restored the clock and knows every control.","statement":"I removed the winding key at eight and was introducing the restoration from the lectern. The clock could not strike on its own."},{"id":"ren","name":"Ren Ito","role":"Event coordinator","summary":"Controlled the lighting cue and wanted tomorrow’s reveal protected.","statement":"I was in the lighting booth throughout the dimming cue. The clock is not connected to our controls."},{"id":"milo","name":"Milo Crane","role":"Press photographer","summary":"Needed a dramatic image before his newspaper deadline.","statement":"I was photographing the painted ceiling. The chime made me turn, and I caught the bird by luck."}],"evidence":[{"id":"incident","phase":1,"kind":"Incident record","title":"The chime at 20:17","source":"Morrow Hall preview log","stamp":"20:17","body":"<table><tr><th>20:00</th><td>Winding key removed and sealed at the lectern</td></tr><tr><th>20:16:50</th><td>Gallery lights dimmed</td></tr><tr><th>20:17:00</th><td>One chime; brass nightjar emerges</td></tr><tr><th>20:17:04</th><td>Clock hands remain at 20:00</td></tr></table><p>No second chime followed. The clock and cabinet were undamaged.</p>"},{"id":"mechanism","phase":1,"kind":"Conservation card","title":"Demonstration control","source":"Eleanor Ash · restoration notes","stamp":"Technical","body":"<p>The clock’s time and striking trains are disconnected during conservation. It cannot run or strike from the winding key.</p><p>A recessed brass tab marked <strong>DEMONSTRATE</strong> sits at the clock’s right-hand base. Pressing the tab in person produces exactly <strong>one chime and one automaton cycle</strong> without moving the hands.</p><div class=\"document-note\">The tab has no timer, wireless receiver, or connection to the gallery lighting system.</div>"},{"id":"booth","phase":1,"kind":"Access record","title":"Lighting booth log","source":"Monitored gallery door","stamp":"20:12–20:21","body":"<table><tr><th>20:12:08</th><td>Ren Ito enters booth</td></tr><tr><th>20:16:50</th><td>Preset B dims gallery lamps</td></tr><tr><th>20:21:13</th><td>Ren Ito opens booth door</td></tr></table><p>The booth window overlooks the gallery. Its control panel operates lamps only.</p>"},{"id":"panorama","phase":2,"kind":"Setup photograph","title":"Gallery panorama","source":"Fixed documentation camera","stamp":"20:16:57","body":"<div class=\"document-note\"><strong>Three seconds before the chime:</strong> Eleanor stands at the lectern with both hands on her open folder. Ren is visible behind the closed booth window. Milo is crouched beside the clock’s right-hand base. His tripod is already aimed directly at the clock.</div><p>The image timestamp is synchronized to the incident recorder.</p>"},{"id":"contact-sheet","phase":2,"kind":"Camera metadata","title":"Milo’s contact sheet","source":"Original image sequence","stamp":"Burst mode","body":"<table><tr><th>20:16:59.72</th><td>Clock tightly framed; hatch closed</td></tr><tr><th>20:17:00.05</th><td>Hatch begins moving</td></tr><tr><th>20:17:00.31</th><td>Nightjar emerging</td></tr><tr><th>20:17:01.02</th><td>Nightjar fully extended</td></tr></table><p>The first exposure began <strong>before</strong> the 20:17:00 chime. Milo said he turned toward the clock only after hearing it.</p>"},{"id":"assignment","phase":2,"kind":"Press assignment","title":"Tomorrow’s lead image","source":"Crane desk · editor note","stamp":"Deadline 20:25","body":"<blockquote><p>The opening bird is tomorrow’s lead image. A closed clock is secondary. The embargo lifts after our print deadline.</p></blockquote><p>A venue note clipped beneath it reads: <strong>No demonstration before Saturday’s public reveal.</strong></p><p>Milo’s edition went to press eight minutes after the chime.</p>"}],"phases":[{"number":1,"title":"A clock that did not run","intro":"The one-note performance looked mechanical. Decide what could produce it without starting the clock.","evidenceIds":["incident","mechanism","booth"],"checkpoint":{"type":"choice","prompt":"What produced exactly one chime while the clock hands stayed still?","options":[{"id":"lighting","label":"The gallery lighting cue"},{"id":"demonstrate","label":"The recessed DEMONSTRATE tab"},{"id":"winding","label":"A hidden turn of the winding key"}],"answer":"demonstrate","success":"Correct. The manual tab produces one chime and one bird cycle without moving the hands.","hints":["Look for a control that works independently of the clock movement.","Only one control is described as producing exactly one chime."]}},{"number":2,"title":"The reaction that started early","intro":"Compare where everyone stood with the order of Milo’s photographs.","evidenceIds":["panorama","contact-sheet","assignment"],"checkpoint":{"type":"choice","prompt":"Which fact directly contradicts Milo’s claim that the chime made him turn?","options":[{"id":"deadline","label":"His newspaper deadline was 20:25"},{"id":"early-burst","label":"His camera burst began before the chime"},{"id":"booth-window","label":"Ren was visible through the booth window"}],"answer":"early-burst","success":"Exactly. Milo had framed the clock and started shooting before the supposedly surprising sound.","hints":["A reaction photograph starts after a surprise.","Compare the first camera timestamp with 20:17:00."]}}],"accusation":{"culprit":"milo","method":"manual-tab","destination":"front-page","labels":{"culprit":"Who staged the chime?","method":"How was it triggered?","destination":"What was the intended payoff?"},"feedback":{"incomplete":"Complete all three parts of the explanation.","incorrect":"That explanation conflicts with at least one timestamp. Recheck the mechanism card, panorama, and first camera exposure.","success":"Explanation accepted. The complete reconstruction is now unsealed."},"methods":[{"id":"manual-tab","label":"The recessed DEMONSTRATE tab was pressed by hand."},{"id":"lighting-cue","label":"The lighting booth sent a hidden remote signal."},{"id":"winding-key","label":"The winding key was secretly returned to the clock."}],"destinations":[{"id":"front-page","label":"A dramatic lead photograph before the embargo."},{"id":"insurance","label":"An insurance claim for a damaged mechanism."},{"id":"delay","label":"A reason to postpone the public opening."}]},"solution":{"headline":"Milo Crane staged the impossible chime.","summary":["The clock did not run: its hands never moved and it chimed only once. The conservation card identifies the manual DEMONSTRATE tab as the one control that produces precisely that result.","Eleanor’s hands were visible at the lectern and Ren remained inside a monitored booth whose controls operated only the lights. Milo alone was crouched beside the tab.","Milo’s camera was already framed and firing before the chime. His editor needed the emerging nightjar as tomorrow’s lead image, but the embargo lifted after the print deadline."],"epilogue":"Milo admitted the stunt. Nothing was damaged, the newspaper held the photograph until the public reveal, and Morrow Hall added a discreet cover over the demonstration tab."},"offer":{"eyebrow":"Your next case","heading":"Ready for a full-length mystery?","body":"The Bellweather Book expands the investigation to twelve exhibits, three evidence phases, four suspects, optional hints, and a printable case packet. It downloads once and works offline.","label":"Investigate The Bellweather Book","url":"https://thorep.github.io/nightjar-docket-site/?utm_source=nightjar_docket_site&utm_medium=free_game&utm_campaign=free_mini&utm_content=case_closed"},"web":{"path":"play/the-nightjar-at-8-17/","title":"Free 10-Minute Family Mystery Game | Nightjar Docket","description":"Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.","canonicalUrl":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/","imageUrl":"https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg","imageAlt":"An ornate astronomical clock reveals a brass nightjar while a camera waits nearby"}};</script>
+  <script>const CASE_DATA = {"schemaVersion":1,"slug":"the-nightjar-at-8-17","caseNumber":"000","title":"The Nightjar at 8:17","subtitle":"A silent clock, a brass bird, and one photograph taken too early.","brand":"Nightjar Docket","rating":"Family-safe · Age 12+","players":"1–6 players","duration":"5–10 minutes","difficulty":"1 / 5","briefing":["At 8:17 p.m., during a private preview at Morrow Hall, a restored astronomical clock gave one clear chime and unfolded its brass nightjar. That should have been impossible: the clock was unwound, its striking mechanism was disconnected, and tomorrow’s public reveal was under embargo.","Only three people were in the gallery. One of them planned the moment. Work out what made the silent clock chime, who staged it, and why the photograph mattered."],"objective":"Identify who caused the impossible chime, explain how it was staged, and determine the intended payoff.","presentation":{"heroAlt":"An ornate black astronomical clock with a brass nightjar automaton emerging under a museum spotlight while a camera waits nearby","heroCaption":"The photograph began before the surprise.","briefingTitle":"One impossible chime.","suspectsTitle":"Three carefully timed stories.","workspaceTitle":"Observe. Compare. Accuse.","accusationTitle":"Record the complete explanation.","accusationDescription":"Choose the person, method, and intended payoff that fit every timestamp.","footer":"Nightjar Docket · This free case stores progress only in your browser."},"suspects":[{"id":"eleanor","name":"Eleanor Ash","role":"Conservation lead","summary":"Restored the clock and knows every control.","statement":"I removed the winding key at eight and was introducing the restoration from the lectern. The clock could not strike on its own."},{"id":"ren","name":"Ren Ito","role":"Event coordinator","summary":"Controlled the lighting cue and wanted tomorrow’s reveal protected.","statement":"I was in the lighting booth throughout the dimming cue. The clock is not connected to our controls."},{"id":"milo","name":"Milo Crane","role":"Press photographer","summary":"Needed a dramatic image before his newspaper deadline.","statement":"I was photographing the painted ceiling. The chime made me turn, and I caught the bird by luck."}],"evidence":[{"id":"incident","phase":1,"kind":"Incident record","title":"The chime at 20:17","source":"Morrow Hall preview log","stamp":"20:17","body":"<table><tr><th>20:00</th><td>Winding key removed and sealed at the lectern</td></tr><tr><th>20:16:50</th><td>Gallery lights dimmed</td></tr><tr><th>20:17:00</th><td>One chime; brass nightjar emerges</td></tr><tr><th>20:17:04</th><td>Clock hands remain at 20:00</td></tr></table><p>No second chime followed. The clock and cabinet were undamaged.</p>"},{"id":"mechanism","phase":1,"kind":"Conservation card","title":"Demonstration control","source":"Eleanor Ash · restoration notes","stamp":"Technical","body":"<p>The clock’s time and striking trains are disconnected during conservation. It cannot run or strike from the winding key.</p><p>A recessed brass tab marked <strong>DEMONSTRATE</strong> sits at the clock’s right-hand base. Pressing the tab in person produces exactly <strong>one chime and one automaton cycle</strong> without moving the hands.</p><div class=\"document-note\">The tab has no timer, wireless receiver, or connection to the gallery lighting system.</div>"},{"id":"booth","phase":1,"kind":"Access record","title":"Lighting booth log","source":"Monitored gallery door","stamp":"20:12–20:21","body":"<table><tr><th>20:12:08</th><td>Ren Ito enters booth</td></tr><tr><th>20:16:50</th><td>Preset B dims gallery lamps</td></tr><tr><th>20:21:13</th><td>Ren Ito opens booth door</td></tr></table><p>The booth window overlooks the gallery. Its control panel operates lamps only.</p>"},{"id":"panorama","phase":2,"kind":"Setup photograph","title":"Gallery panorama","source":"Fixed documentation camera","stamp":"20:16:57","body":"<div class=\"document-note\"><strong>Three seconds before the chime:</strong> Eleanor stands at the lectern with both hands on her open folder. Ren is visible behind the closed booth window. Milo is crouched beside the clock’s right-hand base. His tripod is already aimed directly at the clock.</div><p>The image timestamp is synchronized to the incident recorder.</p>"},{"id":"contact-sheet","phase":2,"kind":"Camera metadata","title":"Milo’s contact sheet","source":"Original image sequence","stamp":"Burst mode","body":"<table><tr><th>20:16:59.72</th><td>Clock tightly framed; hatch closed</td></tr><tr><th>20:17:00.05</th><td>Hatch begins moving</td></tr><tr><th>20:17:00.31</th><td>Nightjar emerging</td></tr><tr><th>20:17:01.02</th><td>Nightjar fully extended</td></tr></table><p>The first exposure began <strong>before</strong> the 20:17:00 chime. Milo said he turned toward the clock only after hearing it.</p>"},{"id":"assignment","phase":2,"kind":"Press assignment","title":"Tomorrow’s lead image","source":"Crane desk · editor note","stamp":"Deadline 20:25","body":"<blockquote><p>The opening bird is tomorrow’s lead image. A closed clock is secondary. The embargo lifts after our print deadline.</p></blockquote><p>A venue note clipped beneath it reads: <strong>No demonstration before Saturday’s public reveal.</strong></p><p>Milo’s edition went to press eight minutes after the chime.</p>"}],"phases":[{"number":1,"title":"A clock that did not run","intro":"The one-note performance looked mechanical. Decide what could produce it without starting the clock.","evidenceIds":["incident","mechanism","booth"],"checkpoint":{"type":"choice","prompt":"What produced exactly one chime while the clock hands stayed still?","options":[{"id":"lighting","label":"The gallery lighting cue"},{"id":"demonstrate","label":"The recessed DEMONSTRATE tab"},{"id":"winding","label":"A hidden turn of the winding key"}],"answer":"demonstrate","success":"Correct. The manual tab produces one chime and one bird cycle without moving the hands.","hints":["Look for a control that works independently of the clock movement.","Only one control is described as producing exactly one chime."]}},{"number":2,"title":"The reaction that started early","intro":"Compare where everyone stood with the order of Milo’s photographs.","evidenceIds":["panorama","contact-sheet","assignment"],"checkpoint":{"type":"choice","prompt":"Which fact directly contradicts Milo’s claim that the chime made him turn?","options":[{"id":"deadline","label":"His newspaper deadline was 20:25"},{"id":"early-burst","label":"His camera burst began before the chime"},{"id":"booth-window","label":"Ren was visible through the booth window"}],"answer":"early-burst","success":"Exactly. Milo had framed the clock and started shooting before the supposedly surprising sound.","hints":["A reaction photograph starts after a surprise.","Compare the first camera timestamp with 20:17:00."]}}],"accusation":{"culprit":"milo","method":"manual-tab","destination":"front-page","labels":{"culprit":"Who staged the chime?","method":"How was it triggered?","destination":"What was the intended payoff?"},"feedback":{"incomplete":"Complete all three parts of the explanation.","incorrect":"That explanation conflicts with at least one timestamp. Recheck the mechanism card, panorama, and first camera exposure.","success":"Explanation accepted. The complete reconstruction is now unsealed."},"methods":[{"id":"manual-tab","label":"The recessed DEMONSTRATE tab was pressed by hand."},{"id":"lighting-cue","label":"The lighting booth sent a hidden remote signal."},{"id":"winding-key","label":"The winding key was secretly returned to the clock."}],"destinations":[{"id":"front-page","label":"A dramatic lead photograph before the embargo."},{"id":"insurance","label":"An insurance claim for a damaged mechanism."},{"id":"delay","label":"A reason to postpone the public opening."}]},"solution":{"headline":"Milo Crane staged the impossible chime.","summary":["The clock did not run: its hands never moved and it chimed only once. The conservation card identifies the manual DEMONSTRATE tab as the one control that produces precisely that result.","Eleanor’s hands were visible at the lectern and Ren remained inside a monitored booth whose controls operated only the lights. Milo alone was crouched beside the tab.","Milo’s camera was already framed and firing before the chime. His editor needed the emerging nightjar as tomorrow’s lead image, but the embargo lifted after the print deadline."],"epilogue":"Milo admitted the stunt. Nothing was damaged, the newspaper held the photograph until the public reveal, and Morrow Hall added a discreet cover over the demonstration tab."},"offer":{"eyebrow":"Your next case","heading":"Ready for a full-length mystery?","body":"The Bellweather Book expands the investigation to twelve exhibits, three evidence phases, four suspects, optional hints, and a printable case packet. It downloads once and works offline.","label":"Investigate The Bellweather Book","url":"https://thorep.github.io/nightjar-docket-site/?utm_source=nightjar_docket_site&utm_medium=free_game&utm_campaign=free_mini&utm_content=case_closed"},"web":{"path":"play/the-nightjar-at-8-17/","title":"Free 10-Minute Family Mystery Game | Nightjar Docket","description":"Play a free 10-minute, family-safe detective mystery in your browser. Examine six clues and solve the case with no signup, app, or printing.","canonicalUrl":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/","imageUrl":"https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg","imageAlt":"An ornate astronomical clock reveals a brass nightjar while a camera waits nearby"}};</script>
   <script>
     (() => {
       "use strict";
