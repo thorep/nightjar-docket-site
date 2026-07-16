@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etsy authorization · Nightjar Docket</title>
+  <style>
+    body { display: grid; min-height: 100vh; margin: 0; place-items: center; color: #fafaf7; background: #141715; font: 17px/1.55 system-ui, sans-serif; }
+    main { width: min(680px, calc(100% - 36px)); padding: 34px; border: 1px solid #5b594f; background: #202321; }
+    h1 { margin-top: 0; font-family: Georgia, serif; font-size: 2.4rem; }
+    textarea { width: 100%; min-height: 150px; padding: 12px; color: #171918; background: #fafaf7; font: 13px/1.4 ui-monospace, monospace; }
+    button { padding: 12px 18px; border: 0; color: white; background: #b84c32; font-weight: 800; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Etsy authorization returned.</h1>
+    <p>Copy this complete callback URL into the local Nightjar Docket authorization command. This page stores and sends nothing.</p>
+    <textarea id="callback" readonly></textarea>
+    <p><button id="copy" type="button">Copy callback URL</button></p>
+  </main>
+  <script>
+    const callback = location.href;
+    document.querySelector("#callback").value = callback;
+    document.querySelector("#copy").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(callback);
+      document.querySelector("#copy").textContent = "Copied";
+    });
+  </script>
+</body>
+</html>
