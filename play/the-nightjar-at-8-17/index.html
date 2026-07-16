@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#171918">
+  <title>The Nightjar at 8:17 · Nightjar Docket</title>
+  
+  <meta name="description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/">
+  <meta property="og:site_name" content="Nightjar Docket">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free 10-Minute Family Mystery Game | Nightjar Docket">
+  <meta property="og:description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.">
+  <meta property="og:url" content="https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/">
+  <meta property="og:image" content="https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="An ornate astronomical clock reveals a brass nightjar while a camera waits nearby">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free 10-Minute Family Mystery Game | Nightjar Docket">
+  <meta name="twitter:description" content="Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.">
+  <meta name="twitter:image" content="https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":["VideoGame","WebApplication"],"name":"The Nightjar at 8:17","description":"Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.","url":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/","image":"https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg","applicationCategory":"GameApplication","operatingSystem":"Any modern web browser","browserRequirements":"JavaScript enabled","isFamilyFriendly":true,"inLanguage":"en","author":{"@type":"Organization","name":"Nightjar Docket","url":"https://thorep.github.io/nightjar-docket-site/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/"}}</script>
+  <style>
+    :root {
+      --ink: oklch(20% 0.01 145);
+      --ink-2: oklch(26% 0.012 145);
+      --paper: oklch(98.8% 0.004 95);
+      --paper-2: oklch(93.5% 0.008 95);
+      --coral: oklch(58% 0.16 38);
+      --coral-dark: oklch(49% 0.15 38);
+      --blue: oklch(46% 0.08 225);
+      --blue-light: oklch(90% 0.035 225);
+      --brass: oklch(60% 0.09 75);
+      --muted-dark: oklch(78% 0.012 95);
+      --muted-light: oklch(43% 0.018 145);
+      --danger: oklch(50% 0.18 25);
+      --success: oklch(44% 0.11 155);
+      --focus: oklch(78% 0.13 80);
+      --radius-sm: 4px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-paper: 0 4px 7px oklch(5% 0 0 / 0.24);
+      --max: 1180px;
+      --z-dialog: 30;
+      --key-art-image: url("../../assets/free/the-nightjar-at-8-17-key-art.webp");
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--paper);
+      background: var(--ink);
+      font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+    button, input, select, textarea { font: inherit; }
+    button, select { cursor: pointer; }
+    a { color: inherit; }
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      transform: translateY(-160%);
+      padding: 10px 14px;
+      color: var(--ink);
+      background: var(--focus);
+      z-index: 50;
+    }
+    .skip-link:focus { transform: none; }
+    .shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin-inline: auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 20px;
+      border-bottom: 1px solid oklch(96% 0 0 / 0.18);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--brass);
+      border-radius: 50%;
+      color: var(--brass);
+      font-family: Georgia, serif;
+    }
+    .tools { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .button {
+      border: 0;
+      border-radius: var(--radius-sm);
+      padding: 12px 18px;
+      font-weight: 720;
+      color: var(--paper);
+      background: var(--coral);
+      transition: background 150ms ease, transform 150ms ease;
+    }
+    .button:hover { background: var(--coral-dark); transform: translateY(-1px); }
+    .button:active { transform: translateY(0); }
+    .button.secondary {
+      border: 1px solid oklch(95% 0 0 / 0.35);
+      color: var(--paper);
+      background: transparent;
+    }
+    .button.secondary:hover { background: oklch(100% 0 0 / 0.08); }
+    .button.small { padding: 8px 12px; font-size: 0.86rem; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.22fr);
+      gap: clamp(36px, 7vw, 96px);
+      align-items: center;
+      padding-block: clamp(58px, 10vw, 128px) clamp(50px, 8vw, 98px);
+    }
+    .hero-visual {
+      position: relative;
+      min-width: 0;
+    }
+    .hero-art {
+      position: relative;
+      min-height: clamp(390px, 48vw, 620px);
+      overflow: hidden;
+      border: 1px solid oklch(96% 0 0 / 0.2);
+      border-radius: var(--radius-md);
+      background:
+        linear-gradient(180deg, transparent 52%, oklch(18% 0.012 145 / 0.9) 100%),
+        var(--key-art-image) center / cover no-repeat;
+      box-shadow: 0 28px 70px oklch(8% 0.01 145 / 0.46);
+    }
+    .hero-art::after {
+      position: absolute;
+      inset: 14px;
+      border: 1px solid oklch(76% 0.09 75 / 0.42);
+      border-radius: calc(var(--radius-md) - 7px);
+      content: "";
+      pointer-events: none;
+    }
+    .hero-art-caption {
+      position: absolute;
+      right: 32px;
+      bottom: 26px;
+      left: 32px;
+      z-index: 1;
+      margin: 0;
+      color: var(--paper);
+      font-size: 0.76rem;
+      font-weight: 750;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+    .case-label {
+      margin: 0 0 18px;
+      color: var(--brass);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      text-wrap: balance;
+    }
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(3.2rem, 8.5vw, 6rem);
+      line-height: 0.91;
+      letter-spacing: -0.038em;
+    }
+    h2 { font-size: clamp(2.1rem, 4.8vw, 3.8rem); line-height: 1; letter-spacing: -0.025em; }
+    h3 { font-size: 1.45rem; line-height: 1.1; }
+    .subtitle {
+      max-width: 58ch;
+      margin: 24px 0 0;
+      color: var(--muted-dark);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      text-wrap: pretty;
+    }
+    .case-facts {
+      display: grid;
+      margin: 18px 0 0;
+      border-top: 1px solid oklch(96% 0 0 / 0.22);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .case-facts div {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid oklch(96% 0 0 / 0.14);
+    }
+    .case-facts div:nth-child(odd) { padding-right: 16px; }
+    .case-facts div:nth-child(even) {
+      padding-left: 16px;
+      border-left: 1px solid oklch(96% 0 0 / 0.14);
+    }
+    .case-facts dt { color: var(--muted-dark); }
+    .case-facts dd { margin: 0; font-weight: 700; text-align: right; }
+    .briefing-wrap {
+      color: var(--ink);
+      background: var(--paper);
+    }
+    .briefing {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+      gap: clamp(32px, 7vw, 90px);
+      padding-block: clamp(56px, 9vw, 108px);
+    }
+    .briefing-copy p { max-width: 67ch; margin: 0 0 18px; }
+    .objective {
+      margin-top: 34px;
+      padding: 20px 22px;
+      border: 1px solid oklch(24% 0.01 145 / 0.3);
+      border-radius: var(--radius-sm);
+      background: white;
+    }
+    .objective strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--coral-dark);
+    }
+    .suspect-strip {
+      color: var(--paper);
+      background: var(--ink-2);
+    }
+    .suspects { padding-block: clamp(52px, 8vw, 92px); }
+    .suspect-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 36px;
+      background: oklch(97% 0 0 / 0.18);
+    }
+    .suspect {
+      min-width: 0;
+      padding: 24px;
+      background: var(--ink-2);
+    }
+    .suspect .role {
+      margin: 7px 0 16px;
+      color: var(--brass);
+      font-size: 0.84rem;
+      font-weight: 750;
+    }
+    .suspect p { color: var(--muted-dark); }
+    .suspect blockquote {
+      margin: 18px 0 0;
+      padding-top: 16px;
+      border-top: 1px solid oklch(96% 0 0 / 0.14);
+      color: var(--paper);
+      font-family: Georgia, serif;
+      font-style: italic;
+    }
+    .workspace {
+      padding-block: clamp(56px, 9vw, 110px);
+    }
+    .ledger {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 28px 0 48px;
+    }
+    .ledger-step {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 12px;
+      border: 1px solid oklch(96% 0 0 / 0.22);
+      border-radius: 999px;
+      color: var(--muted-dark);
+      background: transparent;
+    }
+    .ledger-step.current { color: var(--ink); background: var(--paper); }
+    .ledger-step.done { color: white; border-color: var(--success); background: var(--success); }
+    .ledger-num {
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+    .phase {
+      margin-top: 70px;
+      scroll-margin-top: 24px;
+    }
+    .phase.locked { display: none; }
+    .phase-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    .phase-heading p { max-width: 62ch; margin: 0; color: var(--muted-dark); }
+    .phase-number {
+      color: var(--brass);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .evidence-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px 20px;
+      min-height: 170px;
+      padding: 22px;
+      border: 0;
+      border-radius: var(--radius-sm);
+      color: var(--ink);
+      background: var(--paper);
+      box-shadow: var(--shadow-paper);
+      text-align: left;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+    .evidence-card:hover { transform: translateY(-2px); background: white; }
+    .evidence-card.flagged { box-shadow: inset 0 0 0 3px var(--brass), var(--shadow-paper); }
+    .evidence-type {
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+    .evidence-card h3 { grid-column: 1; margin-top: 8px; }
+    .evidence-card .source { grid-column: 1; align-self: end; color: var(--muted-light); font-size: 0.88rem; }
+    .stamp {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+      align-self: start;
+      padding: 5px 8px;
+      border: 1px solid var(--coral);
+      border-radius: 2px;
+      color: var(--coral-dark);
+      font-size: 0.7rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transform: rotate(1.5deg);
+    }
+    .checkpoint {
+      display: grid;
+      grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+      gap: 32px;
+      margin-top: 24px;
+      padding: 28px;
+      border: 1px solid oklch(96% 0 0 / 0.25);
+      border-radius: var(--radius-md);
+      background: var(--ink-2);
+    }
+    .checkpoint h3 { font-family: "Avenir Next", Avenir, sans-serif; font-size: 1rem; }
+    .checkpoint p { color: var(--muted-dark); }
+    fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+    legend {
+      margin-bottom: 14px;
+      color: var(--paper);
+      font-weight: 720;
+    }
+    .choices { display: grid; gap: 9px; }
+    .choice {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 11px 12px;
+      border: 1px solid oklch(96% 0 0 / 0.2);
+      border-radius: var(--radius-sm);
+      color: var(--paper);
+    }
+    .choice:has(input:checked) { border-color: var(--focus); background: oklch(78% 0.13 80 / 0.1); }
+    input[type="radio"] { margin-top: 5px; accent-color: var(--coral); }
+    .text-input, .notes {
+      width: 100%;
+      border: 1px solid oklch(20% 0 0 / 0.24);
+      border-radius: var(--radius-sm);
+      padding: 13px 14px;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    .checkpoint-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .feedback {
+      min-height: 1.65em;
+      margin: 13px 0 0;
+      color: var(--muted-dark);
+    }
+    .feedback.error { color: oklch(82% 0.10 30); }
+    .feedback.success { color: oklch(80% 0.10 155); }
+    .hint-box {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      color: var(--ink);
+      background: var(--blue-light);
+    }
+    .accusation {
+      display: none;
+      margin-top: 84px;
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: var(--radius-md);
+      color: var(--ink);
+      background: var(--paper);
+    }
+    .accusation.visible { display: block; }
+    .accusation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .field label { display: block; margin-bottom: 7px; font-weight: 750; }
+    .field select {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid oklch(20% 0.01 145 / 0.3);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      color: var(--ink);
+      background: white;
+    }
+    .accusation .button { margin-top: 22px; }
+    .solution {
+      display: none;
+      margin-top: 26px;
+      padding-top: 28px;
+      border-top: 1px solid oklch(20% 0.01 145 / 0.22);
+    }
+    .solution.visible { display: block; }
+    .solution p, .solution li { max-width: 72ch; }
+    .solution li { margin-bottom: 12px; }
+    .solution .epilogue {
+      margin-top: 30px;
+      padding: 22px;
+      border-radius: var(--radius-sm);
+      color: var(--paper);
+      background: var(--blue);
+      font-family: Georgia, serif;
+      font-size: 1.08rem;
+    }
+    .case-offer {
+      display: grid;
+      margin-top: 30px;
+      padding: clamp(24px, 4vw, 38px);
+      border: 1px solid oklch(20% 0.01 145 / 0.2);
+      border-radius: var(--radius-md);
+      gap: 12px;
+      background:
+        linear-gradient(135deg, oklch(96% 0.018 82), white 58%);
+    }
+    .case-offer h3 { max-width: 18ch; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    .case-offer p { margin: 0; color: var(--muted-light); }
+    .case-offer .button {
+      width: fit-content;
+      margin-top: 8px;
+      text-decoration: none;
+    }
+    .notebook {
+      margin-top: 44px;
+      padding: 24px;
+      border: 1px solid oklch(96% 0 0 / 0.18);
+      border-radius: var(--radius-md);
+    }
+    .notebook label { display: block; margin-bottom: 9px; font-weight: 750; }
+    .notes { min-height: 140px; resize: vertical; }
+    .privacy { margin: 8px 0 0; color: var(--muted-dark); font-size: 0.82rem; }
+    .print-evidence { display: none; }
+    .footer {
+      padding-block: 52px;
+      border-top: 1px solid oklch(96% 0 0 / 0.18);
+      color: var(--muted-dark);
+      text-align: center;
+    }
+    dialog {
+      width: min(760px, calc(100% - 28px));
+      max-height: min(86vh, 900px);
+      padding: 0;
+      border: 0;
+      border-radius: var(--radius-sm);
+      color: var(--ink);
+      background: var(--paper);
+      box-shadow: 0 8px 12px oklch(5% 0 0 / 0.35);
+      z-index: var(--z-dialog);
+    }
+    dialog::backdrop { background: oklch(8% 0 0 / 0.82); }
+    .dialog-head {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px 22px;
+      border-bottom: 1px solid oklch(20% 0.01 145 / 0.16);
+      background: var(--paper);
+    }
+    .dialog-head p { margin: 4px 0 0; color: var(--muted-light); }
+    .close {
+      flex: 0 0 auto;
+      width: 40px;
+      height: 40px;
+      border: 1px solid oklch(20% 0.01 145 / 0.26);
+      border-radius: 50%;
+      color: var(--ink);
+      background: transparent;
+      font-size: 1.3rem;
+    }
+    .document { padding: clamp(22px, 5vw, 46px); }
+    .document p, .document li { max-width: 68ch; }
+    .document table {
+      width: 100%;
+      margin: 22px 0;
+      border-collapse: collapse;
+    }
+    .document th, .document td {
+      padding: 10px 8px;
+      border-bottom: 1px solid oklch(20% 0.01 145 / 0.18);
+      text-align: left;
+      vertical-align: top;
+    }
+    .document th { width: 38%; }
+    .document-note {
+      margin-top: 24px;
+      padding: 14px 16px;
+      border: 1px solid var(--blue);
+      border-radius: var(--radius-sm);
+      background: var(--blue-light);
+    }
+    .caption { color: var(--muted-light); font-size: 0.88rem; }
+    blockquote {
+      margin: 20px 0;
+      padding: 18px 20px;
+      border: 1px solid oklch(20% 0.01 145 / 0.2);
+      border-radius: var(--radius-sm);
+      background: white;
+      font-family: Georgia, serif;
+    }
+    .photo-evidence {
+      display: grid;
+      place-items: center;
+      min-height: 320px;
+      margin-bottom: 22px;
+      background: oklch(35% 0.015 75);
+    }
+    .book-cover {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: min(260px, 70%);
+      aspect-ratio: 0.72;
+      border: 8px double var(--brass);
+      color: var(--brass);
+      background: oklch(28% 0.045 235);
+      box-shadow: 7px 9px 0 oklch(12% 0.015 145 / 0.55);
+      text-align: center;
+    }
+    .cover-title {
+      font-family: Georgia, serif;
+      font-size: clamp(1.1rem, 4vw, 2rem);
+      letter-spacing: 0.1em;
+    }
+    .compass {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      font-size: 2.4rem;
+    }
+    .dialog-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 22px 22px;
+    }
+    .flag-button[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); background: oklch(86% 0.07 75); }
+    .noscript {
+      padding: 24px;
+      color: var(--ink);
+      background: var(--focus);
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .hero, .briefing, .phase-heading, .checkpoint { grid-template-columns: 1fr; }
+      .hero { align-items: start; }
+      .case-facts { max-width: 520px; }
+      .suspect-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .accusation-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 22px, var(--max)); }
+      .topbar { align-items: flex-start; }
+      .brand span:last-child { display: none; }
+      .hero { padding-top: 46px; }
+      .hero-art { min-height: min(118vw, 520px); }
+      .case-facts { grid-template-columns: 1fr; }
+      .case-facts div:nth-child(odd),
+      .case-facts div:nth-child(even) {
+        padding-right: 0;
+        padding-left: 0;
+        border-left: 0;
+      }
+      h1 { font-size: clamp(3rem, 17vw, 4.4rem); }
+      .suspect-list, .evidence-grid { grid-template-columns: 1fr; }
+      .suspect { padding: 20px; }
+      .checkpoint { padding: 20px; }
+      .ledger-step span:last-child { display: none; }
+      .dialog-head { padding: 16px; }
+      .document { padding: 20px; }
+      .document th { width: 42%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+    @media print {
+      :root { color-scheme: light; }
+      body { color: #171918; background: white; }
+      .skip-link, .topbar, .button, .ledger, .checkpoint, .notebook, dialog, .footer, #phases, .accusation { display: none !important; }
+      .hero, .briefing, .suspects, .workspace { padding: 28px 0; }
+      .briefing-wrap, .suspect-strip, .suspect, .workspace { color: #171918; background: white; }
+      .hero { grid-template-columns: 1fr; color: #171918; }
+      .hero-art { min-height: 110mm; background-image: var(--key-art-image); }
+      .hero-art-caption { color: white; }
+      .subtitle, .phase-heading p, .suspect p, .suspect blockquote { color: #333; }
+      .case-facts { border-color: #777; }
+      .suspect-list { grid-template-columns: repeat(2, 1fr); gap: 12px; background: transparent; }
+      .suspect { border: 1px solid #aaa; break-inside: avoid; }
+      .print-evidence { display: block; }
+      .print-evidence > h2 { margin-bottom: 24px; }
+      .print-evidence article {
+        margin: 0 0 24px;
+        padding: 20px;
+        border: 1px solid #888;
+        break-inside: avoid;
+      }
+      .print-evidence .evidence-type { color: #2f5f72; }
+      .print-evidence h3 { margin: 4px 0; }
+      .print-evidence .print-source { margin: 0 0 16px; color: #444; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#case-workspace">Skip to investigation</a>
+  <noscript><div class="noscript">This case needs JavaScript enabled in your browser. It still works completely offline.</div></noscript>
+  <header class="shell topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">N</span><span>Nightjar Docket</span></div>
+    <div class="tools">
+      <button class="button secondary small" id="printCase" type="button">Print evidence</button>
+      <button class="button secondary small" id="resetCase" type="button">Reset case</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="shell hero" aria-labelledby="case-title">
+      <div>
+        <p class="case-label">Case <span id="caseNumber"></span></p>
+        <h1 id="case-title"></h1>
+        <p class="subtitle" id="caseSubtitle"></p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-art" id="heroArt" role="img">
+          <p class="hero-art-caption" id="heroCaption"></p>
+        </div>
+        <dl class="case-facts" id="caseFacts"></dl>
+      </div>
+    </section>
+
+    <section class="briefing-wrap" aria-labelledby="briefing-title">
+      <div class="shell briefing">
+        <div>
+          <p class="case-label">Case briefing</p>
+          <h2 id="briefing-title"></h2>
+        </div>
+        <div class="briefing-copy" id="briefingCopy"></div>
+      </div>
+    </section>
+
+    <section class="suspect-strip" aria-labelledby="suspect-title">
+      <div class="shell suspects">
+        <p class="case-label">Persons of interest</p>
+        <h2 id="suspect-title"></h2>
+        <div class="suspect-list" id="suspectList"></div>
+      </div>
+    </section>
+
+    <section class="shell workspace" id="case-workspace" aria-labelledby="workspace-title">
+      <p class="case-label">Investigation</p>
+      <h2 id="workspace-title"></h2>
+      <nav class="ledger" id="ledger" aria-label="Case progress"></nav>
+      <div id="phases"></div>
+
+      <section class="accusation" id="accusation" aria-labelledby="accusation-title">
+        <p class="case-label">Final accusation</p>
+        <h2 id="accusation-title"></h2>
+        <p id="accusationDescription"></p>
+        <div class="accusation-grid" id="accusationFields"></div>
+        <button class="button" id="submitAccusation" type="button">Submit accusation</button>
+        <p class="feedback" id="accusationFeedback" role="status" aria-live="polite"></p>
+        <div class="solution" id="solution"></div>
+      </section>
+
+      <section class="notebook" aria-labelledby="notes-title">
+        <label id="notes-title" for="notes">Investigator’s notebook</label>
+        <textarea class="notes" id="notes" placeholder="Names, times, contradictions, theories…"></textarea>
+        <p class="privacy">Saved only in this browser on this device.</p>
+      </section>
+
+      <section class="print-evidence" id="printEvidence" aria-hidden="true">
+        <p class="case-label">Evidence packet</p>
+        <h2>Case documents</h2>
+        <div id="printEvidenceList"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell" id="footerCopy"></div>
+  </footer>
+
+  <dialog id="evidenceDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-head">
+      <div>
+        <span class="evidence-type" id="dialogType"></span>
+        <h3 id="dialogTitle"></h3>
+        <p id="dialogSource"></p>
+      </div>
+      <button class="close" id="closeDialog" type="button" aria-label="Close evidence">×</button>
+    </div>
+    <article class="document" id="dialogBody"></article>
+    <div class="dialog-actions">
+      <button class="button secondary small flag-button" id="flagEvidence" type="button" aria-pressed="false">Mark significant</button>
+      <button class="button small" id="nextEvidence" type="button">Next evidence</button>
+    </div>
+  </dialog>
+
+  <script>const CASE_DATA = {"schemaVersion":1,"slug":"the-nightjar-at-8-17","caseNumber":"000","title":"The Nightjar at 8:17","subtitle":"A silent clock, a brass bird, and one photograph taken too early.","brand":"Nightjar Docket","rating":"Family-safe · Age 12+","players":"1–6 players","duration":"5–10 minutes","difficulty":"1 / 5","briefing":["At 8:17 p.m., during a private preview at Morrow Hall, a restored astronomical clock gave one clear chime and unfolded its brass nightjar. That should have been impossible: the clock was unwound, its striking mechanism was disconnected, and tomorrow’s public reveal was under embargo.","Only three people were in the gallery. One of them planned the moment. Work out what made the silent clock chime, who staged it, and why the photograph mattered."],"objective":"Identify who caused the impossible chime, explain how it was staged, and determine the intended payoff.","presentation":{"heroAlt":"An ornate black astronomical clock with a brass nightjar automaton emerging under a museum spotlight while a camera waits nearby","heroCaption":"The photograph began before the surprise.","briefingTitle":"One impossible chime.","suspectsTitle":"Three carefully timed stories.","workspaceTitle":"Observe. Compare. Accuse.","accusationTitle":"Record the complete explanation.","accusationDescription":"Choose the person, method, and intended payoff that fit every timestamp.","footer":"Nightjar Docket · This free case stores progress only in your browser."},"suspects":[{"id":"eleanor","name":"Eleanor Ash","role":"Conservation lead","summary":"Restored the clock and knows every control.","statement":"I removed the winding key at eight and was introducing the restoration from the lectern. The clock could not strike on its own."},{"id":"ren","name":"Ren Ito","role":"Event coordinator","summary":"Controlled the lighting cue and wanted tomorrow’s reveal protected.","statement":"I was in the lighting booth throughout the dimming cue. The clock is not connected to our controls."},{"id":"milo","name":"Milo Crane","role":"Press photographer","summary":"Needed a dramatic image before his newspaper deadline.","statement":"I was photographing the painted ceiling. The chime made me turn, and I caught the bird by luck."}],"evidence":[{"id":"incident","phase":1,"kind":"Incident record","title":"The chime at 20:17","source":"Morrow Hall preview log","stamp":"20:17","body":"<table><tr><th>20:00</th><td>Winding key removed and sealed at the lectern</td></tr><tr><th>20:16:50</th><td>Gallery lights dimmed</td></tr><tr><th>20:17:00</th><td>One chime; brass nightjar emerges</td></tr><tr><th>20:17:04</th><td>Clock hands remain at 20:00</td></tr></table><p>No second chime followed. The clock and cabinet were undamaged.</p>"},{"id":"mechanism","phase":1,"kind":"Conservation card","title":"Demonstration control","source":"Eleanor Ash · restoration notes","stamp":"Technical","body":"<p>The clock’s time and striking trains are disconnected during conservation. It cannot run or strike from the winding key.</p><p>A recessed brass tab marked <strong>DEMONSTRATE</strong> sits at the clock’s right-hand base. Pressing the tab in person produces exactly <strong>one chime and one automaton cycle</strong> without moving the hands.</p><div class=\"document-note\">The tab has no timer, wireless receiver, or connection to the gallery lighting system.</div>"},{"id":"booth","phase":1,"kind":"Access record","title":"Lighting booth log","source":"Monitored gallery door","stamp":"20:12–20:21","body":"<table><tr><th>20:12:08</th><td>Ren Ito enters booth</td></tr><tr><th>20:16:50</th><td>Preset B dims gallery lamps</td></tr><tr><th>20:21:13</th><td>Ren Ito opens booth door</td></tr></table><p>The booth window overlooks the gallery. Its control panel operates lamps only.</p>"},{"id":"panorama","phase":2,"kind":"Setup photograph","title":"Gallery panorama","source":"Fixed documentation camera","stamp":"20:16:57","body":"<div class=\"document-note\"><strong>Three seconds before the chime:</strong> Eleanor stands at the lectern with both hands on her open folder. Ren is visible behind the closed booth window. Milo is crouched beside the clock’s right-hand base. His tripod is already aimed directly at the clock.</div><p>The image timestamp is synchronized to the incident recorder.</p>"},{"id":"contact-sheet","phase":2,"kind":"Camera metadata","title":"Milo’s contact sheet","source":"Original image sequence","stamp":"Burst mode","body":"<table><tr><th>20:16:59.72</th><td>Clock tightly framed; hatch closed</td></tr><tr><th>20:17:00.05</th><td>Hatch begins moving</td></tr><tr><th>20:17:00.31</th><td>Nightjar emerging</td></tr><tr><th>20:17:01.02</th><td>Nightjar fully extended</td></tr></table><p>The first exposure began <strong>before</strong> the 20:17:00 chime. Milo said he turned toward the clock only after hearing it.</p>"},{"id":"assignment","phase":2,"kind":"Press assignment","title":"Tomorrow’s lead image","source":"Crane desk · editor note","stamp":"Deadline 20:25","body":"<blockquote><p>The opening bird is tomorrow’s lead image. A closed clock is secondary. The embargo lifts after our print deadline.</p></blockquote><p>A venue note clipped beneath it reads: <strong>No demonstration before Saturday’s public reveal.</strong></p><p>Milo’s edition went to press eight minutes after the chime.</p>"}],"phases":[{"number":1,"title":"A clock that did not run","intro":"The one-note performance looked mechanical. Decide what could produce it without starting the clock.","evidenceIds":["incident","mechanism","booth"],"checkpoint":{"type":"choice","prompt":"What produced exactly one chime while the clock hands stayed still?","options":[{"id":"lighting","label":"The gallery lighting cue"},{"id":"demonstrate","label":"The recessed DEMONSTRATE tab"},{"id":"winding","label":"A hidden turn of the winding key"}],"answer":"demonstrate","success":"Correct. The manual tab produces one chime and one bird cycle without moving the hands.","hints":["Look for a control that works independently of the clock movement.","Only one control is described as producing exactly one chime."]}},{"number":2,"title":"The reaction that started early","intro":"Compare where everyone stood with the order of Milo’s photographs.","evidenceIds":["panorama","contact-sheet","assignment"],"checkpoint":{"type":"choice","prompt":"Which fact directly contradicts Milo’s claim that the chime made him turn?","options":[{"id":"deadline","label":"His newspaper deadline was 20:25"},{"id":"early-burst","label":"His camera burst began before the chime"},{"id":"booth-window","label":"Ren was visible through the booth window"}],"answer":"early-burst","success":"Exactly. Milo had framed the clock and started shooting before the supposedly surprising sound.","hints":["A reaction photograph starts after a surprise.","Compare the first camera timestamp with 20:17:00."]}}],"accusation":{"culprit":"milo","method":"manual-tab","destination":"front-page","labels":{"culprit":"Who staged the chime?","method":"How was it triggered?","destination":"What was the intended payoff?"},"feedback":{"incomplete":"Complete all three parts of the explanation.","incorrect":"That explanation conflicts with at least one timestamp. Recheck the mechanism card, panorama, and first camera exposure.","success":"Explanation accepted. The complete reconstruction is now unsealed."},"methods":[{"id":"manual-tab","label":"The recessed DEMONSTRATE tab was pressed by hand."},{"id":"lighting-cue","label":"The lighting booth sent a hidden remote signal."},{"id":"winding-key","label":"The winding key was secretly returned to the clock."}],"destinations":[{"id":"front-page","label":"A dramatic lead photograph before the embargo."},{"id":"insurance","label":"An insurance claim for a damaged mechanism."},{"id":"delay","label":"A reason to postpone the public opening."}]},"solution":{"headline":"Milo Crane staged the impossible chime.","summary":["The clock did not run: its hands never moved and it chimed only once. The conservation card identifies the manual DEMONSTRATE tab as the one control that produces precisely that result.","Eleanor’s hands were visible at the lectern and Ren remained inside a monitored booth whose controls operated only the lights. Milo alone was crouched beside the tab.","Milo’s camera was already framed and firing before the chime. His editor needed the emerging nightjar as tomorrow’s lead image, but the embargo lifted after the print deadline."],"epilogue":"Milo admitted the stunt. Nothing was damaged, the newspaper held the photograph until the public reveal, and Morrow Hall added a discreet cover over the demonstration tab."},"offer":{"eyebrow":"Your next case","heading":"Ready for a full-length mystery?","body":"The Bellweather Book expands the investigation to twelve exhibits, three evidence phases, four suspects, optional hints, and a printable case packet. It downloads once and works offline.","label":"Investigate The Bellweather Book","url":"https://thorep.github.io/nightjar-docket-site/?utm_source=nightjar_docket_site&utm_medium=free_game&utm_campaign=free_mini&utm_content=case_closed"},"web":{"path":"play/the-nightjar-at-8-17/","title":"Free 10-Minute Family Mystery Game | Nightjar Docket","description":"Play a free 10-minute, family-safe detective mystery in your browser. Examine six illustrated clues and solve the case with no signup, app, or printing.","canonicalUrl":"https://thorep.github.io/nightjar-docket-site/play/the-nightjar-at-8-17/","imageUrl":"https://thorep.github.io/nightjar-docket-site/assets/free/the-nightjar-at-8-17-og.jpg","imageAlt":"An ornate astronomical clock reveals a brass nightjar while a camera waits nearby"}};</script>
+  <script>
+    (() => {
+      "use strict";
+
+      const storageKey = `nightjar-docket:${CASE_DATA.slug}:v1`;
+      const freshState = () => ({ completed: [], hints: {}, flagged: [], notes: "", solved: false });
+      let state = loadState();
+      let activeEvidenceId = null;
+
+      const $ = (selector, root = document) => root.querySelector(selector);
+      const el = (tag, className, text) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = text;
+        return node;
+      };
+      const normalize = value => String(value ?? "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      function loadState() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
+          if (!saved || typeof saved !== "object") return freshState();
+          return {
+            ...freshState(),
+            ...saved,
+            completed: Array.isArray(saved.completed) ? [...saved.completed] : [],
+            hints: saved.hints && typeof saved.hints === "object" ? { ...saved.hints } : {},
+            flagged: Array.isArray(saved.flagged) ? [...saved.flagged] : []
+          };
+        } catch {
+          return freshState();
+        }
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(state));
+        } catch {
+          // Keep the case playable when browser privacy settings disable storage.
+        }
+      }
+
+      function currentPhase() {
+        for (const phase of CASE_DATA.phases) {
+          if (!state.completed.includes(phase.number)) return phase.number;
+        }
+        return CASE_DATA.phases.length + 1;
+      }
+
+      function isUnlocked(phaseNumber) {
+        return phaseNumber <= currentPhase();
+      }
+
+      function renderStatic() {
+        document.title = `${CASE_DATA.title} · ${CASE_DATA.brand}`;
+        $("#caseNumber").textContent = CASE_DATA.caseNumber;
+        $("#case-title").textContent = CASE_DATA.title;
+        $("#caseSubtitle").textContent = CASE_DATA.subtitle;
+        const presentation = CASE_DATA.presentation || {};
+        $("#heroArt").setAttribute(
+          "aria-label",
+          presentation.heroAlt ||
+            "A midnight-blue antique atlas and evidence docket under a museum spotlight",
+        );
+        $("#heroCaption").textContent =
+          presentation.heroCaption || "The evidence is already on the table.";
+        $("#briefing-title").textContent =
+          presentation.briefingTitle || "A perfect copy.";
+        $("#suspect-title").textContent =
+          presentation.suspectsTitle || "Four imperfect stories.";
+        $("#workspace-title").textContent =
+          presentation.workspaceTitle || "Examine. Compare. Accuse.";
+        $("#accusation-title").textContent =
+          presentation.accusationTitle || "Put the whole case on record.";
+        $("#accusationDescription").textContent =
+          presentation.accusationDescription ||
+          "Select the person, method, and destination that fit every decisive clue.";
+        $("#footerCopy").textContent =
+          presentation.footer ||
+          "Nightjar Docket · The case works offline and stores progress only on this device.";
+
+        const facts = [
+          ["Players", CASE_DATA.players],
+          ["Time", CASE_DATA.duration],
+          ["Difficulty", CASE_DATA.difficulty],
+          ["Content", CASE_DATA.rating]
+        ];
+        $("#caseFacts").replaceChildren(...facts.map(([term, value]) => {
+          const row = el("div");
+          row.append(el("dt", "", term), el("dd", "", value));
+          return row;
+        }));
+
+        const briefing = $("#briefingCopy");
+        briefing.replaceChildren(...CASE_DATA.briefing.map(copy => el("p", "", copy)));
+        const objective = el("div", "objective");
+        objective.innerHTML = `<strong>Your objective</strong>${escapeHtml(CASE_DATA.objective)}`;
+        briefing.append(objective);
+
+        $("#suspectList").replaceChildren(...CASE_DATA.suspects.map(suspect => {
+          const card = el("article", "suspect");
+          card.innerHTML = `
+            <h3>${escapeHtml(suspect.name)}</h3>
+            <p class="role">${escapeHtml(suspect.role)}</p>
+            <p>${escapeHtml(suspect.summary)}</p>
+            <blockquote>“${escapeHtml(suspect.statement)}”</blockquote>`;
+          return card;
+        }));
+
+        $("#printEvidenceList").replaceChildren(...CASE_DATA.evidence.map(evidence => {
+          const document = el("article");
+          document.innerHTML = `
+            <span class="evidence-type">${escapeHtml(evidence.kind)} · ${escapeHtml(evidence.stamp)}</span>
+            <h3>${escapeHtml(evidence.title)}</h3>
+            <p class="print-source">${escapeHtml(evidence.source)}</p>
+            <div class="document">${evidence.body}</div>`;
+          return document;
+        }));
+      }
+
+      function renderInvestigation() {
+        renderLedger();
+        const phasesRoot = $("#phases");
+        phasesRoot.replaceChildren(...CASE_DATA.phases.map(renderPhase));
+        $("#accusation").classList.toggle("visible", state.completed.length === CASE_DATA.phases.length);
+        renderAccusationFields();
+        $("#notes").value = state.notes;
+        if (state.solved) renderSolution();
+      }
+
+      function renderLedger() {
+        const phaseNow = currentPhase();
+        $("#ledger").replaceChildren(...CASE_DATA.phases.map(phase => {
+          const item = el("div", "ledger-step");
+          if (state.completed.includes(phase.number)) item.classList.add("done");
+          else if (phase.number === phaseNow) item.classList.add("current");
+          item.setAttribute("aria-current", phase.number === phaseNow ? "step" : "false");
+          item.append(el("span", "ledger-num", state.completed.includes(phase.number) ? "✓" : String(phase.number)));
+          item.append(el("span", "", phase.title));
+          return item;
+        }));
+      }
+
+      function renderPhase(phase) {
+        const section = el("section", `phase${isUnlocked(phase.number) ? "" : " locked"}`);
+        section.id = `phase-${phase.number}`;
+        section.setAttribute("aria-labelledby", `phase-${phase.number}-title`);
+
+        const head = el("div", "phase-heading");
+        const title = el("div");
+        title.append(el("p", "phase-number", `Phase ${phase.number}`));
+        title.append(el("h2", "", phase.title));
+        title.lastChild.id = `phase-${phase.number}-title`;
+        head.append(title, el("p", "", phase.intro));
+        section.append(head);
+
+        const grid = el("div", "evidence-grid");
+        grid.append(...phase.evidenceIds.map(id => renderEvidenceCard(CASE_DATA.evidence.find(item => item.id === id))));
+        section.append(grid);
+
+        if (!state.completed.includes(phase.number)) section.append(renderCheckpoint(phase));
+        else {
+          const done = el("div", "hint-box");
+          done.textContent = phase.checkpoint.success;
+          section.append(done);
+        }
+        return section;
+      }
+
+      function renderEvidenceCard(evidence) {
+        const card = el("button", `evidence-card${state.flagged.includes(evidence.id) ? " flagged" : ""}`);
+        card.type = "button";
+        card.dataset.evidenceId = evidence.id;
+        card.setAttribute("aria-label", `Open evidence: ${evidence.title}`);
+        card.innerHTML = `
+          <span class="evidence-type">${escapeHtml(evidence.kind)}</span>
+          <span class="stamp">${escapeHtml(evidence.stamp)}</span>
+          <h3>${escapeHtml(evidence.title)}</h3>
+          <span class="source">${escapeHtml(evidence.source)}</span>`;
+        card.addEventListener("click", () => openEvidence(evidence.id));
+        return card;
+      }
+
+      function renderCheckpoint(phase) {
+        const wrap = el("div", "checkpoint");
+        const copy = el("div");
+        copy.innerHTML = `<h3>Checkpoint ${phase.number}</h3><p>Solve this deduction to open the next evidence packet.</p>`;
+        const form = el("form");
+        form.dataset.phase = String(phase.number);
+        const fieldset = el("fieldset");
+        const legend = el("legend", "", phase.checkpoint.prompt);
+        fieldset.append(legend);
+
+        if (phase.checkpoint.type === "choice") {
+          const choices = el("div", "choices");
+          phase.checkpoint.options.forEach(option => {
+            const label = el("label", "choice");
+            const input = el("input");
+            input.type = "radio";
+            input.name = `checkpoint-${phase.number}`;
+            input.value = option.id;
+            label.append(input, el("span", "", option.label));
+            choices.append(label);
+          });
+          fieldset.append(choices);
+        } else {
+          const input = el("input", "text-input");
+          input.type = phase.checkpoint.type === "number" ? "number" : "text";
+          input.inputMode = phase.checkpoint.type === "number" ? "numeric" : "text";
+          input.name = `checkpoint-${phase.number}`;
+          input.placeholder = phase.checkpoint.placeholder || "";
+          input.autocomplete = "off";
+          fieldset.append(input);
+        }
+
+        const actions = el("div", "checkpoint-actions");
+        const submit = el("button", "button", "Check deduction");
+        submit.type = "submit";
+        const hint = el("button", "button secondary small", "Use a hint");
+        hint.type = "button";
+        hint.addEventListener("click", () => showHint(phase.number));
+        actions.append(submit, hint);
+        fieldset.append(actions);
+
+        const hintBox = el("div", "hint-box");
+        hintBox.hidden = true;
+        hintBox.id = `hint-${phase.number}`;
+        const feedback = el("p", "feedback");
+        feedback.id = `feedback-${phase.number}`;
+        feedback.setAttribute("role", "status");
+        feedback.setAttribute("aria-live", "polite");
+
+        form.append(fieldset, hintBox, feedback);
+        form.addEventListener("submit", event => {
+          event.preventDefault();
+          checkCheckpoint(phase, new FormData(form));
+        });
+        wrap.append(copy, form);
+
+        const usedHints = state.hints[phase.number] || 0;
+        if (usedHints) {
+          hintBox.hidden = false;
+          hintBox.textContent = phase.checkpoint.hints[Math.min(usedHints - 1, phase.checkpoint.hints.length - 1)];
+        }
+        return wrap;
+      }
+
+      function checkCheckpoint(phase, formData) {
+        const value = normalize(formData.get(`checkpoint-${phase.number}`));
+        const correct = [phase.checkpoint.answer, ...(phase.checkpoint.aliases || [])].map(normalize).includes(value);
+        const feedback = $(`#feedback-${phase.number}`);
+        if (!value) {
+          feedback.className = "feedback error";
+          feedback.textContent = "Record a deduction before checking it.";
+          return;
+        }
+        if (!correct) {
+          feedback.className = "feedback error";
+          feedback.textContent = "That conclusion leaves at least one decisive clue unexplained. Review the evidence or use a hint.";
+          return;
+        }
+        state.completed = [...new Set([...state.completed, phase.number])].sort((a, b) => a - b);
+        saveState();
+        renderInvestigation();
+        const next = $(`#phase-${phase.number + 1}`) || $("#accusation");
+        next?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function showHint(phaseNumber) {
+        const phase = CASE_DATA.phases.find(item => item.number === phaseNumber);
+        const count = Math.min((state.hints[phaseNumber] || 0) + 1, phase.checkpoint.hints.length);
+        state.hints[phaseNumber] = count;
+        saveState();
+        const box = $(`#hint-${phaseNumber}`);
+        box.hidden = false;
+        box.textContent = phase.checkpoint.hints[count - 1];
+      }
+
+      function openEvidence(id) {
+        activeEvidenceId = id;
+        const evidence = CASE_DATA.evidence.find(item => item.id === id);
+        $("#dialogType").textContent = `${evidence.kind} · ${evidence.stamp}`;
+        $("#dialogTitle").textContent = evidence.title;
+        $("#dialogSource").textContent = evidence.source;
+        $("#dialogBody").innerHTML = evidence.body;
+        $("#flagEvidence").setAttribute("aria-pressed", String(state.flagged.includes(id)));
+        $("#flagEvidence").textContent = state.flagged.includes(id) ? "Marked significant" : "Mark significant";
+        $("#evidenceDialog").showModal();
+      }
+
+      function nextEvidence() {
+        const unlocked = CASE_DATA.evidence.filter(item => isUnlocked(item.phase));
+        const index = unlocked.findIndex(item => item.id === activeEvidenceId);
+        const next = unlocked[(index + 1) % unlocked.length];
+        openEvidence(next.id);
+      }
+
+      function toggleFlag() {
+        if (!activeEvidenceId) return;
+        if (state.flagged.includes(activeEvidenceId)) {
+          state.flagged = state.flagged.filter(id => id !== activeEvidenceId);
+        } else {
+          state.flagged.push(activeEvidenceId);
+        }
+        saveState();
+        $("#flagEvidence").setAttribute("aria-pressed", String(state.flagged.includes(activeEvidenceId)));
+        $("#flagEvidence").textContent = state.flagged.includes(activeEvidenceId) ? "Marked significant" : "Mark significant";
+        document.querySelectorAll(`[data-evidence-id="${activeEvidenceId}"]`).forEach(card => {
+          card.classList.toggle("flagged", state.flagged.includes(activeEvidenceId));
+        });
+      }
+
+      function renderAccusationFields() {
+        const root = $("#accusationFields");
+        if (root.childElementCount) return;
+        const labels = CASE_DATA.accusation.labels || {};
+        root.append(
+          selectField(
+            "accused",
+            labels.culprit || "Who made the swap?",
+            CASE_DATA.suspects.map(item => ({ id: item.id, label: `${item.name} — ${item.role}` })),
+          ),
+          selectField("method", labels.method || "How was it done?", CASE_DATA.accusation.methods),
+          selectField(
+            "destination",
+            labels.destination || "Where was it sent?",
+            CASE_DATA.accusation.destinations,
+          ),
+        );
+      }
+
+      function selectField(id, labelText, options) {
+        const wrap = el("div", "field");
+        const label = el("label", "", labelText);
+        label.htmlFor = id;
+        const select = el("select");
+        select.id = id;
+        select.name = id;
+        select.append(new Option("Select…", ""));
+        options.forEach(option => select.append(new Option(option.label, option.id)));
+        wrap.append(label, select);
+        return wrap;
+      }
+
+      function submitAccusation() {
+        const accused = $("#accused").value;
+        const method = $("#method").value;
+        const destination = $("#destination").value;
+        const feedback = $("#accusationFeedback");
+        const messages = CASE_DATA.accusation.feedback || {};
+        if (!accused || !method || !destination) {
+          feedback.className = "feedback error";
+          feedback.textContent =
+            messages.incomplete || "Complete all three parts of the accusation.";
+          return;
+        }
+        const correct = accused === CASE_DATA.accusation.culprit
+          && method === CASE_DATA.accusation.method
+          && destination === CASE_DATA.accusation.destination;
+        if (!correct) {
+          feedback.className = "feedback error";
+          feedback.textContent =
+            messages.incorrect ||
+            "That accusation conflicts with at least one measured fact. Recheck the photograph, package weight, and routing code.";
+          return;
+        }
+        state.solved = true;
+        saveState();
+        feedback.className = "feedback success";
+        feedback.textContent =
+          messages.success ||
+          "Accusation accepted. The complete reconstruction is now unsealed.";
+        renderSolution();
+      }
+
+      function renderSolution() {
+        const solution = $("#solution");
+        solution.classList.add("visible");
+        solution.innerHTML = `
+          <p class="case-label">Case closed</p>
+          <h2>${escapeHtml(CASE_DATA.solution.headline)}</h2>
+          <ol>${CASE_DATA.solution.summary.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ol>
+          <div class="epilogue">${escapeHtml(CASE_DATA.solution.epilogue)}</div>`;
+        if (CASE_DATA.offer) {
+          const offer = el("aside", "case-offer");
+          offer.innerHTML = `
+            <p class="case-label">${escapeHtml(CASE_DATA.offer.eyebrow || "Another case awaits")}</p>
+            <h3>${escapeHtml(CASE_DATA.offer.heading)}</h3>
+            <p>${escapeHtml(CASE_DATA.offer.body)}</p>
+            <a class="button" href="${escapeHtml(CASE_DATA.offer.url)}">${escapeHtml(CASE_DATA.offer.label)}</a>`;
+          solution.append(offer);
+        }
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      renderStatic();
+      renderInvestigation();
+
+      $("#closeDialog").addEventListener("click", () => $("#evidenceDialog").close());
+      $("#nextEvidence").addEventListener("click", nextEvidence);
+      $("#flagEvidence").addEventListener("click", toggleFlag);
+      $("#submitAccusation").addEventListener("click", submitAccusation);
+      $("#notes").addEventListener("input", event => {
+        state.notes = event.target.value;
+        saveState();
+      });
+      $("#printCase").addEventListener("click", () => window.print());
+      $("#resetCase").addEventListener("click", () => {
+        if (!confirm("Reset all progress, hints, flags, and notes for this case?")) return;
+        try {
+          localStorage.removeItem(storageKey);
+        } catch {
+          // Reset the in-memory state even when storage is unavailable.
+        }
+        state = freshState();
+        $("#solution").classList.remove("visible");
+        $("#solution").replaceChildren();
+        $("#accusationFeedback").textContent = "";
+        ["accused", "method", "destination"].forEach(id => {
+          const field = $(`#${id}`);
+          if (field) field.value = "";
+        });
+        renderInvestigation();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      $("#evidenceDialog").addEventListener("click", event => {
+        if (event.target === $("#evidenceDialog")) $("#evidenceDialog").close();
+      });
+    })();
+  </script>
+</body>
+</html>
